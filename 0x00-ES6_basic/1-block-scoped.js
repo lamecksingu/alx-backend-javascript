@@ -1,11 +1,13 @@
 export default function taskBlock(trueOrFalse) {
-  const task = false;  // Use const because task should not be re-assigned
-  const task2 = true;  // Use const for task2 as well
+  const task = false;
+  const task2 = true;
 
   if (trueOrFalse) {
-    // Use let inside the if block to avoid overwriting the outer variables
-    let task = true;
-    let task2 = false;
+    const task = true;
+    const task2 = false;
+    if (task && task2) {
+      return [task, task2];
+    }
   }
 
   return [task, task2];
